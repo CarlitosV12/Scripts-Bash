@@ -51,3 +51,8 @@ HOSTNM=$(hostname)
 TMPFILE="${HOSTNM}.info" 
 #gather the info into the tmp file; errors, too 
 DumpInfo  > $TMPFILE 2>&1 
+
+#Línea 11 - Al leer la línea del txt, eliminamos todo del | en adelante, para dejar solo el comando de Linux 
+#Línea 12 - Remueve el comando de Linux, para dejar los datos de después de la | 
+#Línea 13 - Borramos todo de la barra en delante, pero tomando lo obtenido del comando anterior 
+#Línea 14 - Repetimos lo anterior para extraer el comando de XML 
